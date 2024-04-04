@@ -99,7 +99,7 @@ app.use((req, res,next)=>{
 
 app.use("/listings",listingRouter);
 app.use("/listings/:id/reviews", reviewRouter);
-app.use("/",userRouter);
+app.use("/",listingRouter);
 
 
 app.all("*",(req, res,next) => {
@@ -115,4 +115,6 @@ app.use((err,req,res,next) =>{
 
 app.listen(8080,() => {
     console.log('listening to port 8080');
+    
+
 });
